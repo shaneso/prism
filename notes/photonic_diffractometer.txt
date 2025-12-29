@@ -1,0 +1,122 @@
+photonic diffractometer
+
+parts
+
+laser diode (DPSS preferred) - options: 650nm red
+1x/2x aspheric lens to collimate the beam
+>= 1x photodiode (can use one or build a sensor fusion array)
+2x stepper motor with microstep driver resolution
+goniometer to measure angle (optional)
+ads1115 adc units (for refining and amplifying analog photodiode signals) - optimize SNR (use ads1x15 arduino library)
+wires, headers, crimp wire jumper pins (maybe buy the kit set)
+(optional) 2x polarizers to study TE/TM modes
+
+3d printed parts
+
+sample stage
+diffractometer base mount
+stepper motor arms
+laser diode & photodiode array casing
+
+theory
+
+fraunhofer theory
+mie theory
+bragg's law
+bragg-brentano geometry
+laue diffraction
+bremsstrahlung continuum (for x-rays)
+characteristic x-rays (k-alpha/k-beta)
+
+purpose
+
+- to measure diffraction efficiency of metasurface gratings
+- to verify periodicity and lattice spacing
+- to characterize angular scattering and coupling (key to beam steering & fourier-like operations)
+- to measure coupling efficiency
+- run diagnostics to determine if a metasurface will function as an optical computing element
+
+usage
+
+measure lattice spacing, periodicity - yes, can measure within range
+coupling in photonic structures - partially measurable (requires sweep and polarization control)
+photonic crystals/photonic crystal resonators - partially measurable (near 650 nm if laser is same)
+colloidal crystals - yes, can measure
+metasurfaces/metamaterials - partially measurable (need polarization control for TE/TM)
+zero-index mediums
+optical computing (oc) materials
+waveguides - mostly not measurable
+bandgap devices - partially measurable
+
+measurable components
+
+dielectric thin films
+photonic bandgap polymers
+colloidal opals & inverse opals
+plasma-deposited nanofilms
+plasmonic/metal films
+surface-relief gratings (lithographic/holographic)
+1D/2D photonic crystals
+metasurface arrays (nanoantennas, resonators, gratings)
+colloidal monolayers
+patterned plasma-deposited nanostructures
+nanoparticle arrays (plasmonic metasurfaces)
+diffractive optical elements (DOEs) & holographic surfaces
+input/output couplers to inject/extract light into waveguides
+resonators (2D photonic crystal cavities, distributed Bragg reflectors)
+
+excellent for
+
+plasma-deposited photonic crystals (PECVD SiNx lattices)
+reactive ion etched (RIE) gratings
+plasma-assisted ALD multilayers (thin Bragg stacks)
+plasma-sprayed nanostructured coatings
+plasma-fabricated metamaterials (oxide/nitride nanopillars)
+transparent conducting oxides (TCOs) tuned by plasma
+plasma-deposited ENZ layers
+
+sweet spot analysis (best results)
+
+colloidal crystals/opals (PMMA, polystyrene beads, silica spheres)
+  - act as 3D photonic crystals that create photonic bandgaps
+  - low-loss interconnects, cavity resonators, and optical filters in computing chips
+1D/2D photonic crystals (etched gratings, periodic nanopatterns)
+  - provide waveguides & cavities with high Q-factor (core logic & memory of photonic chips)
+  - enable slow-light effects for delay lines and synchronization
+  - basis for all-optical switches, multiplexers, and demultiplexers in photonic processors
+surface-relief gratings (diffraction gratings, DOEs, holographic gratings)
+  - used as couplers to inject/extract light into integrated waveguides
+  - enable beam steering & wavelength routing (optical interconnect fabrics)
+  - form foundation of fourier-optical computing (where computing is done in the spatial-frequency domain)
+plasma-deposited multilayers/Bragg mirrors (SiO₂/TiO₂, Si₃N₄ stacks)
+  - act as optical mirrors/reflectors for resonators & vertical-cavity lasers
+  - used to confine photons in optical memory / cavity-based logic gates
+  - enable filters & band-selective routing of signals in computing chips
+metasurface gratings - periodic nanoantennas, nanopost arrays (periodic dielectric/metallic nanostructures tuned to red light)
+  - provide beam steering, wavefront shaping, and phase control at the chip level
+  - serve as optical interconnects and multiplexers
+  - enables flat optics (compact optical logic circuits and AI photonic accelerators)
+  - can implement matrix-vector multiplication in optical domain (metasurface computing)
+
+moderate results
+
+photonic crystal resonators/bandgap devices
+metasurfaces with polarization-dependent responses
+plasmonic arrays (Au, Ag nanoparticle lattices, nanohole arrays)
+phase-change metasurfaces (GST, Sb₂Se₃)
+transparent conducting oxides (ITO, AZO films patterned into gratings)
+
+setup
+
+collimate laser diode beam pulse (especially if in fusion array) with a single aspheric lens to avoid spherical aberration
+configure θ–2θ geometry and bragg-brentano geometry
+
+stepper setup
+https://www.electronicwings.com/arduino/stepper-motor-interfacing-with-arduino-uno
+
+use spatial filter (pinhole) to filter out noise fringes
+https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=10768
+https://www.edmundoptics.ca/knowledge-center/application-notes/lasers/understanding-spatial-filters/
+
+xrd principle
+https://ywcmatsci.yale.edu/principle-0
