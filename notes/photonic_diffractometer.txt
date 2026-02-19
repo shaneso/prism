@@ -20,10 +20,11 @@ laser diode & photodiode array casing
 
 theory
 
-fraunhofer theory
-mie theory
 bragg's law
 bragg-brentano geometry
+rayleigh equation to determine smallest feature size (critical dimension)
+fraunhofer theory
+mie theory
 laue diffraction
 bremsstrahlung continuum (for x-rays)
 characteristic x-rays (k-alpha/k-beta)

@@ -24,13 +24,13 @@ void loop() {
   for (int i = 0; i < 512; i++) {
     stepMotor(1);
   }
-  delay(1000); // Wait for 1 second
+  // delay(1000); // Wait for 1 second
  
   // Rotate counterclockwise
   for (int i = 0; i < 512; i++) {
     stepMotor(-1);
   }
-  delay(1000); // Wait for 1 second
+  // delay(1000); // Wait for 1 second
 }
 
 void stepMotor(int step) {
