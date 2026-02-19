@@ -12,7 +12,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build
-      run: cd main && gcc -o prism *.c  # Adjust based on your source files
-    - name: Test
-      run: cd main && ./prism  # Or your test command
+    
+    - name: Set up Arduino CLI
+      uses: arduino/setup-arduino-cli@v1
+    
+    - name: Install Arduino core
+      run: arduino-cli core install arduino:avr
+    
+    - name: Build sketch
+      run: arduino-cli compile --fqbn arduino:avr:uno main/src/prism/prism.ino
