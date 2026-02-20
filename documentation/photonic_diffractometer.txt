@@ -1,4 +1,7 @@
+Prism 01
 photonic diffractometer
+
+A Bragg diffraction analyzer to probe the structure and periodicity of optical computing substrates
 
 parts
 
